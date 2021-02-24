@@ -1,0 +1,22 @@
+{
+  "name": "festival_musical",
+  "version": "1.0.0",
+  "description": "aprendiendo gulp y sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "gulp"
+  ],
+  "engines": {
+    "node": "8.x|10.x"
+  },
+  "author": "lautaro nicolas cantero",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
