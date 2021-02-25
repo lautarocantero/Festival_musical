@@ -9,7 +9,9 @@ const sass = require('gulp-sass');
 
 function css( ){
     return src('FestivalMusica_inicio/scss/app.scss')
-        .pipe(  sass() )    //ejecutate primero,
+        .pipe(  sass({
+            outputStyle: 'expanded'                 
+        }) )    //ejecutate primero,
         .pipe(  dest('./build/css') )
 } 
 

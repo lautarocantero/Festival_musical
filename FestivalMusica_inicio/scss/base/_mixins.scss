@@ -1,0 +1,26 @@
+//USARLOS CUANDO REPITO MUCHO CODIGO CSS
+
+/*
+@mixin nuevoMixin ($transform, $size) { //si toma parametros va con parentesis, sino no
+    font-size: $size;
+    color: $morado;
+    text-transform: $transform;
+}
+
+*/
+
+@mixin telefono{
+    @media (min-width:$telefono){
+        @content;               //le voy a pasar mucha infor en el cuerpo, inyectala
+    }
+}
+@mixin tablet{
+    @media (min-width:$tablet){
+        @content;               //le voy a pasar mucha infor en el cuerpo, inyectala
+    }
+}
+@mixin desktop{
+    @media (min-width:$desktop){
+        @content;               //le voy a pasar mucha infor en el cuerpo, inyectala
+    }
+}

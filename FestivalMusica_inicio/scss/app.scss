@@ -1,15 +1,6 @@
 @import 'base/normalize';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+@import 'base/variables';       //puedo usar esto en ↓
+@import 'base/mixins';
 @import 'base/globales';
-@import 'base/variables';
-
-body{
-    font-family: $fuente_principal;
-}
-
-h1{
-    font-family: $fuente_principal;
-}
-
-h2{    
-    font-family: $fuente_principal;
-}
+@import 'layout/header';
