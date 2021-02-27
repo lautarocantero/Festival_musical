@@ -1,0 +1,28 @@
+
+.informacion{
+
+        padding: 4rem;
+    
+    .contenido-informacion{
+        column-gap: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .imagen-informacion{
+    //     // width: 240%;
+    // }
+
+    .descripcion-informacion{
+        margin-top: 2rem;
+    }
+    
+    .fecha-informacion {
+        color: $rosa;
+        margin-top: 5rem;
+        font-weight: bold;
+    }
+
+
+}

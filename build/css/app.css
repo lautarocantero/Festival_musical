@@ -360,6 +360,10 @@ body {
   font-size: 1.6rem;
 }
 
+body.fijar-body {
+  overflow: hidden;
+}
+
 p {
   color: #000;
   font-size: 2rem;
@@ -394,6 +398,14 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+.bg-verde {
+  background-color: #4CB8B3;
+}
+
+.bg-amarillo {
+  background-color: #FEF46D;
 }
 
 .header {
@@ -436,4 +448,224 @@ h3 {
 
 .navegacion-principal a:hover {
   color: #FEF46D;
+}
+
+.video {
+  overflow: hidden;
+  position: relative;
+  max-height: 45rem;
+}
+
+.video .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#891c1e+0,9e37f2+67,ffffff+100&0.8+0,0.5+100 */
+  background: -moz-linear-gradient(-45deg, rgba(137, 28, 30, 0.8) 0%, rgba(158, 55, 242, 0.6) 67%, rgba(255, 255, 255, 0.5) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(137, 28, 30, 0.8) 0%, rgba(158, 55, 242, 0.6) 67%, rgba(255, 255, 255, 0.5) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(137, 28, 30, 0.8) 0%, rgba(158, 55, 242, 0.6) 67%, rgba(255, 255, 255, 0.5) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc891c1e', endColorstr='#80ffffff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.video video {
+  display: block;
+  width: 100%;
+}
+
+.contenido-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.contenido-video h2 {
+  display: flex;
+  flex-direction: column;
+  color: #ffff;
+  font-size: 7rem;
+  align-items: flex-start;
+}
+
+.contenido-video h2 span {
+  background-color: #F53766;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
+
+.informacion {
+  padding: 4rem;
+}
+
+.informacion .contenido-informacion {
+  column-gap: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.informacion .descripcion-informacion {
+  margin-top: 2rem;
+}
+
+.informacion .fecha-informacion {
+  color: #F53766;
+  margin-top: 5rem;
+  font-weight: bold;
+}
+
+.lineup {
+  background-color: #F53766;
+  padding: 5rem 0;
+}
+
+.lineup h3, .lineup p {
+  text-align: center;
+  color: #ffff;
+}
+
+.lineup .dia {
+  text-transform: uppercase;
+  margin: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+}
+
+.escenarios-contenedor .escenario {
+  padding-top: 2.5rem;
+}
+
+.escenarios-contenedor .nombre-escenario {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.escenarios-contenedor .nombre-escenario:after {
+  content: '';
+  width: 20rem;
+  height: 10rem;
+  display: block;
+  margin: 2rem auto 0 auto;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.rock .nombre-escenario:after {
+  background-image: url(/FestivalMusica_inicio/src/img/icono_rock.png);
+}
+
+.edm .nombre-escenario:after {
+  background-image: url(/FestivalMusica_inicio/src/img/icono_edm.png);
+}
+
+.calendario {
+  list-style: none;
+  padding: 0;
+}
+
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 900;
+}
+
+.calendario li span {
+  font-weight: 400;
+}
+
+.bg-verde .calendario li:nth-child(odd) {
+  background-color: #3b9691;
+}
+
+.bg-amarillo .calendario li:nth-child(odd) {
+  background-color: #eada02;
+}
+
+.galeria {
+  background-color: #ffff;
+  padding: 10rem;
+  text-align: center;
+}
+
+.galeria h3 {
+  margin-bottom: 3rem;
+}
+
+.galeria .galeria-imagenes {
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.66667rem;
+}
+
+@media (min-width: 768px) {
+  .galeria .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.66667rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .galeria .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 1.66667rem;
+  }
+}
+
+.galeria li {
+  list-style: none;
+}
+
+.overlay {
+  position: fixed;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ea5b5d+0,f0fc11+100&0.32+0,0.32+100 */
+  background: -moz-linear-gradient(-45deg, rgba(234, 91, 93, 0.32) 0%, rgba(240, 252, 17, 0.32) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(234, 91, 93, 0.32) 0%, rgba(240, 252, 17, 0.32) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(234, 91, 93, 0.32) 0%, rgba(240, 252, 17, 0.32) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52ea5b5d', endColorstr='#52f0fc11',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: grid;
+  place-items: center;
+}
+
+.overlay img {
+  width: 50%;
+}
+
+.btn-cerrar {
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(to top, #4CB8B3, #FEF46D);
+  border: 2px solid black;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.btn-cerrar:hover {
+  background: linear-gradient(to top, #F53766, #752f97);
+  cursor: pointer;
 }

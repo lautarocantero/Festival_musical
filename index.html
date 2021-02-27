@@ -20,8 +20,14 @@
             </nav>
         </div>
     </header>
-    
+
     <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>Rock & EDM Festival
+                <span>Julio 2021 Buenos Aires, Argentina</span> </h2>
+            </div>
+        </div>
         <!-- //controls le das play, autplay lo reproduce solo, pero en chrome agregar muted -->
         <video controls autoplay muted loop>
             <source src="./FestivalMusica_inicio/video/concierto.mp4" type="video/mp4">
@@ -29,6 +35,94 @@
             <source src="./FestivalMusica_inicio/video/concierto.webm" type="video/webm">
         </video>
     </div>
+
+    <div class="informacion">
+        <div class="contenedor contenido-informacion">
+            <div class="imagen-informacion">
+                <!-- imagen minificada -->
+                <img src="build/img/imagen_vocalista.jpg" alt="imagen_vocalista">
+            </div>
+            <div class="descripcion-informacion">
+                <h3>Rock & EDM Festival </h3>
+                <p class="fecha-informacion">Julio 2021 Buenos Aires, Argentina</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquam at inventore doloribus quia ab blanditiis in sequi iure! Itaque numquam saepe laboriosam nam, reprehenderit neque sint ipsam quod Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi ut esse blanditiis commodi, pariatur vel, sapiente earum hic reprehenderit aliquid illo. Dolores ullam, veritatis sunt laudantium natus ipsum mollitia. Sequi! </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="lineup">
+
+        <h3>Line Up</h3>
+        <p class="dia">Viernes 21</p>
+
+        <div class="escenarios-contenedor contenedor">
+
+            <div class="escenario rock bg-amarillo">
+                <p class="nombre-escenario">Escenario Rock</p>
+                <!-- despues de este parrafo quiero una imagen  -->
+                <ul class="calendario">
+                    <li>24:00 | <span>Metallica</span></li>
+                    <li>22:00 | <span>Gun´s & roses</span></li>
+                    <li>20.00 | <span>AC/DC</span></li>
+                    <li>19.00 | <span>Van Halen</span></li>
+                    <li>18:00 | <span>Jimmy Hendrix</span></li>
+                    <li>17:00 | <span>Nirvanna</span></li>
+                </ul>
+            </div> <!--final de escenario-->
+
+
+            <div class="escenario edm bg-verde">
+                <p class="nombre-escenario">Escenario EDM</p>
+                <ul class="calendario">
+                    <li>24:00 | <span>DeadMau5</span></li>
+                    <li>22:00 | <span>Skrillex</span></li>
+                    <li>20.00 | <span>MarshMallow</span></li>
+                    <li>19.00 | <span>Avicci</span></li>
+                    <li>18:00 | <span>Daft Punk</span></li>
+                    <li>17:00 | <span>Audien</span></li>
+                </ul>
+            </div> <!--final de escenario-->
+            
+        </div> <!--final de escenarios-->
+
+            <p class="dia">Sábado 22</p>
+        <div class="escenarios-contenedor contenedor">
+            <div class="escenario rock bg-verde">
+                <p class="nombre-escenario">Escenario Rock</p>
+                <ul class="calendario">
+                    <li>24:00 | <span>Metallica</span></li>
+                    <li>22:00 | <span>Gun´s & roses</span></li>
+                    <li>20.00 | <span>AC/DC</span></li>
+                    <li>19.00 | <span>Van Halen</span></li>
+                    <li>18:00 | <span>Jimmy Hendrix</span></li>
+                    <li>17:00 | <span>Nirvanna</span></li>
+                </ul>
+            </div> <!--final de escenario-->
+
+
+            <div class="escenario edm bg-amarillo">
+                <p class="nombre-escenario">Escenario EDM</p>
+                <ul class="calendario">
+                    <li>24:00 | <span>DeadMau5</span></li>
+                    <li>22:00 | <span>Skrillex</span></li>
+                    <li>20.00 | <span>MarshMallow</span></li>
+                    <li>19.00 | <span>Avicci</span></li>
+                    <li>18:00 | <span>Daft Punk</span></li>
+                    <li>17:00 | <span>Audien</span></li>
+                </ul>
+            </div> <!--final de escenario-->
+        </div>
+    </section>
+
+    <section class="galeria">
+
+        <h3>Galeria</h3>
+        <ul class="galeria-imagenes">
+        </ul>
+        
+    </section>
+
+    <script src="./build/js/bundle.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,62 @@
+
+.galeria{
+    background-color: $blanco;
+    padding: 10rem;
+    text-align: center;
+
+    h3{
+        margin-bottom: 3rem;
+    }
+
+    .galeria-imagenes{
+        display: grid;
+        @include grid(2,$separacion / 3);
+        @include tablet{
+            @include grid(4,$separacion / 3);
+        }
+        @include desktop{
+            @include grid(6,$separacion / 3);
+        }
+    }
+
+    li{
+        list-style: none;
+    }
+    
+} 
+
+.overlay{
+    position: fixed;    //imagen fija
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ea5b5d+0,f0fc11+100&0.32+0,0.32+100 */
+    background: -moz-linear-gradient(-45deg, rgba(234,91,93,0.32) 0%, rgba(240,252,17,0.32) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(234,91,93,0.32) 0%,rgba(240,252,17,0.32) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(234,91,93,0.32) 0%,rgba(240,252,17,0.32) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52ea5b5d', endColorstr='#52f0fc11',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: grid;
+    place-items: center;    //centrar
+
+    img{
+        width: 50%;
+    }
+}
+
+.btn-cerrar{
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(to top, $verde, $amarillo);
+    border: 2px solid black;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: $black;
+    font-size: 3rem;
+
+    &:hover{
+        background: linear-gradient(to top, $rosa, $morado);
+        cursor: pointer;
+    }
+
+}

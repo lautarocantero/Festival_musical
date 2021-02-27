@@ -24,3 +24,9 @@
         @content;               //le voy a pasar mucha infor en el cuerpo, inyectala
     }
 }
+
+@mixin grid($columnas,$separacion){
+    display: grid;
+    grid-template-columns: repeat($columnas , 1fr );
+    column-gap: $separacion;
+}
