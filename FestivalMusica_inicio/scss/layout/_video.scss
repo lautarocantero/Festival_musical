@@ -29,21 +29,40 @@
     align-items: center;   //no sirve porque se centra en su propia altura
     justify-content: center;
     height: 100%;
+    width: 100%;
     position: relative;    //poner el texto por sobre el video
     z-index: 1;
 
 
     h2 {
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         color: $blanco;
-        font-size: 7rem;
+        font-size: 2rem;
         align-items: flex-start; //el span se alineara a la derecha lo mas posible "acortandolo"
 
         span {
             background-color: $rosa;
-            font-size: 2rem;
+            font-size: 1rem;
             padding: 1rem 2rem;
+        }
+
+        @include tablet{
+            font-size: 5rem;
+            span {
+                background-color: $rosa;
+                font-size: 2rem;
+                padding: 1rem 2rem;
+            }
+        } 
+        @include desktop{
+            font-size: 7rem;
+            span {
+                background-color: $rosa;
+                font-size: 2rem;
+                padding: 1rem 2rem;
+            }
         }
 
     }

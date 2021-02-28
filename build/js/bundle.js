@@ -1,3 +1,23 @@
+
+document.addEventListener('DOMContentLoaded',function(){
+    scrollNav();
+});
+
+function scrollNav(){
+    const enlaces = document.querySelectorAll('.navegacion-principal a'); //seleccionalos todos
+
+    enlaces.forEach( function (enlace){
+        enlace.addEventListener('click',function(e){
+            e.preventDefault();
+
+            const seccion = document.querySelector(e.target.attributes.href.value);
+            seccion.scrollIntoView({
+                behavior: 'smooth',
+            });
+        });
+    });
+    
+}
 document.addEventListener('DOMContentLoaded', function() {  //esperar a que el documento este listo
     crearGaleria();
 });

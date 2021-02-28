@@ -1,6 +1,58 @@
 
 .informacion{
 
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-top: 2rem;
+
+    h3,.fecha-informacion{
+        text-align: center;
+    }
+
+    .fecha-informacion {
+        color: $rosa;
+        font-weight: bold;
+    }
+
+    .imagen-informacion{
+        cursor: pointer;
+    }
+
+}
+
+@include tablet{
+
+    h3,.fecha-informacion{
+        text-align:justify;
+    }
+
+    .contenido-informacion{
+        padding: 2rem;
+        justify-content: center;
+        column-gap: 2rem;
+    }
+
+    .fecha-informacion {
+        color: $rosa;
+        font-weight: bold;
+    }
+}
+
+@include desktop{
+    .contenido-informacion{
+        padding: 3rem;
+        display: flex;
+        align-items: center;
+        
+    }
+}
+
+
+/*
+
+
+.informacion{
+
         padding: 4rem;
     
     .contenido-informacion{
@@ -26,3 +78,5 @@
 
 
 }
+
+*/

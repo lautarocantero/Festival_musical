@@ -1,0 +1,86 @@
+
+.boletos{
+    @include grid(1,$separacion);
+    padding: $separacion 0;
+
+    h3{
+        text-align: center;
+        color: $blanco;
+    }
+
+    .plan{
+        p{
+            color: $blanco;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .contenedor-boletos{
+        margin-top: 1rem;
+    }
+
+    @include tablet{
+        .contenedor-boletos{
+            margin-top: 1rem;
+            @include grid(2,$separacion);
+        }
+    }
+
+    @include desktop{
+        .contenedor-boletos{
+            margin-top: 1rem;
+            @include grid(2,$separacion);
+        }
+    }
+
+}
+
+.pase{
+    width: 100%;
+    border-spacing: 0;
+    thead{
+        background-color: $rosa;
+        color: $blanco;
+        th{
+            padding: 1rem;
+            font-weight: $delgada;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+    }
+    
+    tbody{
+        background-color: $blanco;
+        td{
+            padding: $separacion/3;
+            border-bottom: 1px solid $rosa;
+        }
+
+        tr{
+            &:last-of-type{
+                td{
+                    border-bottom: none;
+                }
+            }
+        }
+
+    }
+
+    tfoot{
+        background-color: $morado;
+        color: $blanco;
+        text-align: center;
+        font-size: 2rem;
+        td{
+            padding: $separacion/3;
+        }
+        &:hover{
+            td{
+                cursor: pointer;
+            }
+        }
+    }
+
+}

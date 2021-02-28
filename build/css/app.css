@@ -425,6 +425,7 @@ h3 {
 }
 
 .header h1 {
+  cursor: pointer;
   color: #ffff;
   margin-bottom: 1rem;
   text-align: center;
@@ -439,7 +440,8 @@ h3 {
 .navegacion-principal {
   display: flex;
   gap: 2rem;
-  justify-content: center;
+  justify-content: space-around;
+  column-gap: 2rem;
 }
 
 .navegacion-principal a {
@@ -481,45 +483,122 @@ h3 {
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 100%;
   position: relative;
   z-index: 1;
 }
 
 .contenido-video h2 {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   color: #ffff;
-  font-size: 7rem;
+  font-size: 2rem;
   align-items: flex-start;
 }
 
 .contenido-video h2 span {
   background-color: #F53766;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 1rem 2rem;
 }
 
+@media (min-width: 768px) {
+  .contenido-video h2 {
+    font-size: 5rem;
+  }
+  .contenido-video h2 span {
+    background-color: #F53766;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenido-video h2 {
+    font-size: 7rem;
+  }
+  .contenido-video h2 span {
+    background-color: #F53766;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+  }
+}
+
 .informacion {
-  padding: 4rem;
-}
-
-.informacion .contenido-informacion {
-  column-gap: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.informacion .descripcion-informacion {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   margin-top: 2rem;
+}
+
+.informacion h3, .informacion .fecha-informacion {
+  text-align: center;
 }
 
 .informacion .fecha-informacion {
   color: #F53766;
-  margin-top: 5rem;
   font-weight: bold;
 }
 
+.informacion .imagen-informacion {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  h3, .fecha-informacion {
+    text-align: justify;
+  }
+  .contenido-informacion {
+    padding: 2rem;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+  .fecha-informacion {
+    color: #F53766;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenido-informacion {
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/*
+
+
+.informacion{
+
+        padding: 4rem;
+    
+    .contenido-informacion{
+        column-gap: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .imagen-informacion{
+    //     // width: 240%;
+    // }
+
+    .descripcion-informacion{
+        margin-top: 2rem;
+    }
+    
+    .fecha-informacion {
+        color: $rosa;
+        margin-top: 5rem;
+        font-weight: bold;
+    }
+
+
+}
+
+*/
 .lineup {
   background-color: #F53766;
   padding: 5rem 0;
@@ -596,15 +675,19 @@ h3 {
 
 .galeria {
   background-color: #ffff;
-  padding: 10rem;
+  padding: 1rem;
+  margin: 0 auto;
   text-align: center;
 }
 
 .galeria h3 {
   margin-bottom: 3rem;
+  text-align: center;
+  color: #752f97;
 }
 
 .galeria .galeria-imagenes {
+  padding: 0;
   display: grid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -631,6 +714,22 @@ h3 {
   list-style: none;
 }
 
+.galeria img {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .galeria {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .galeria {
+    padding: 10rem;
+  }
+}
+
 .overlay {
   position: fixed;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ea5b5d+0,f0fc11+100&0.32+0,0.32+100 */
@@ -650,7 +749,19 @@ h3 {
 }
 
 .overlay img {
-  width: 50%;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .overlay img {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .overlay img {
+    width: 55%;
+  }
 }
 
 .btn-cerrar {
@@ -668,4 +779,110 @@ h3 {
 .btn-cerrar:hover {
   background: linear-gradient(to top, #F53766, #752f97);
   cursor: pointer;
+}
+
+.boletos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 5rem;
+  padding: 5rem 0;
+}
+
+.boletos h3 {
+  text-align: center;
+  color: #ffff;
+}
+
+.boletos .plan p {
+  color: #ffff;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.boletos .contenedor-boletos {
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .boletos .contenedor-boletos {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .boletos .contenedor-boletos {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+}
+
+.pase {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.pase thead {
+  background-color: #F53766;
+  color: #ffff;
+}
+
+.pase thead th {
+  padding: 1rem;
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.pase tbody {
+  background-color: #ffff;
+}
+
+.pase tbody td {
+  padding: 1.66667rem;
+  border-bottom: 1px solid #F53766;
+}
+
+.pase tbody tr:last-of-type td {
+  border-bottom: none;
+}
+
+.pase tfoot {
+  background-color: #752f97;
+  color: #ffff;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.pase tfoot td {
+  padding: 1.66667rem;
+}
+
+.pase tfoot:hover td {
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #F53766;
+  text-align: center;
+  padding: 0.83333rem;
+}
+
+.footer p {
+  margin: 0 auto;
+  color: #ffff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+@media (min-width: 1200px) {
+  .footer p {
+    font-size: 1.5rem;
+  }
 }

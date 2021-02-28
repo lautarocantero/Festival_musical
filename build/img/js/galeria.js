@@ -25,12 +25,38 @@ function mostrarImagen(e){
     const imagen = document.createElement('IMG');
     imagen.src = `build/img/grande/${id}.webp`;
 
+    //crear overlay
+
+
     const overlay = document.createElement('DIV');
     overlay.appendChild(imagen);
+    overlay.classList.add('overlay');
 
-    //mostrarlo en el html
+    //Boton cerrar imagen
+
+    const boton = document.createElement('p');
+    boton.textContent = "X";
+    boton.classList.add('btn-cerrar');
+
+    overlay.appendChild(boton);
+
+
+    //presionar boton
+
+    boton.onclick = function(){
+        overlay.remove();
+        body.classList.remove('fijar-body')
+    }
+
+    //presionar cualquier lado
+    overlay.onclick = function(){
+        overlay.remove();
+        body.classList.remove('fijar-body')
+    }
+
+    //mostrar overlay en el html
 
     const body = document.querySelector('body');
     body.appendChild(overlay);
-
+    body.classList.add('fijar-body')
 }

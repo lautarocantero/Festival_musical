@@ -1,14 +1,18 @@
 
 .galeria{
     background-color: $blanco;
-    padding: 10rem;
+    padding: 1rem;
+    margin: 0 auto;
     text-align: center;
 
     h3{
         margin-bottom: 3rem;
+        text-align: center;
+        color: $morado;
     }
 
     .galeria-imagenes{
+        padding: 0;
         display: grid;
         @include grid(2,$separacion / 3);
         @include tablet{
@@ -22,8 +26,26 @@
     li{
         list-style: none;
     }
+
+    img{
+        cursor: pointer;
+    }
     
 } 
+
+@include tablet{
+    .galeria{
+        padding: 3rem;
+    }
+}
+
+@include desktop{
+    .galeria{
+        padding: 10rem;
+    }
+}
+
+
 
 .overlay{
     position: fixed;    //imagen fija
@@ -39,8 +61,25 @@
     place-items: center;    //centrar
 
     img{
-        width: 50%;
+        width: 90%;
     }
+}
+
+@include tablet{
+    .overlay{
+        img{
+            width: 95%;
+        }
+    }
+}
+
+@include desktop{
+    .overlay{
+        img{
+            width: 55%;
+        }
+    }
+
 }
 
 .btn-cerrar{
