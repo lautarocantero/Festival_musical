@@ -5,12 +5,26 @@ const imagemin = require('gulp-imagemin');
 const notify = require('gulp-notify');
 const webp = require('gulp-webp');
 const concat = require('gulp-concat');
+const rename = require('gulp-rename');
 
 //uno lleva llave porque tiene multiples funciones
 //series varias funciones
 //simultaneo hacerlo al mismo tiempo
 //src usa return, es para buscar el contenido de algo
 //watch hacer cambios en ciertos archivos cada vez que haya cambios
+
+
+//utilidades css
+
+const autoprefixer = require ('autoprefixer'); //agregar prefijos
+const postcss = require('gulp-postcss');    //procesamiento
+const cssnano = require('cssnano'); //optimiza el codigo 
+const sourcemaps = require('gulp-sourcemaps');
+
+
+//utilidades js
+
+const terser = require('gulp-terser-js');
 
 const paths = {
     imagenes : 'FestivalMusica_inicio/src/img/**/*',
@@ -21,9 +35,10 @@ const paths = {
 
 function css(){
     return src(paths.scss)
-        .pipe(  sass({
-            outputStyle: 'expanded'                 
-        }) )    //ejecutate primero,
+        .pipe(sourcemaps.init())
+        .pipe(  sass() )    //ejecutate primero,
+        .pipe ( postcss ( [ autoprefixer() ,cssnano() ] ) )
+        .pipe( sourcemaps.write('.'))
         .pipe(  dest('./build/css') )
         .pipe( notify({message: 'css anda bien'}))      
 } 
@@ -52,8 +67,12 @@ function versionWebp() {
 
 function javascript(){
     return src(paths.js)
+        .pipe(sourcemaps.init())
         .pipe(concat('bundle.js')) //no funciona
+        .pipe(terser())
+        .pipe(sourcemaps.write('.'))
         .pipe(dest('./build/js'))
+        .pipe( rename( { suffix: '.min'}))
         .pipe(notify({message: 'javascript listo'}) );
 }
 

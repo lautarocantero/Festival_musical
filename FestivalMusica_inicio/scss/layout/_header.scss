@@ -3,7 +3,7 @@
     background-color: $verde;
     
     .contenido-header{
-        padding: $separacion / 2 0; //es como un calc de 5 - 2 rem
+        padding: $separacion / 3 ; //es como un calc de 5 - 2 rem
         
         @include telefono{
             display: flex;
@@ -23,6 +23,13 @@
         }
         //@include nuevoMixin(uppercase, 3rem);
     }
+
+    &.fijo{
+        position:fixed;
+        width: 100%;
+        box-shadow: 0 .3rem 4rem #444;
+    }
+
 }
 
 .navegacion-principal{
